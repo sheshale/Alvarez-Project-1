@@ -10,6 +10,11 @@
     scroll-behavior: smooth;
 }
 
+:focus-visible {
+    outline: 3px solid #d98772;
+    outline-offset: 4px;
+}
+
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background-color: #f8faff;
