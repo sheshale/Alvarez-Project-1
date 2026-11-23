@@ -17,6 +17,22 @@ body {
     line-height: 1.6;
 }
 
+.skip-link {
+    position: absolute;
+    left: 16px;
+    top: -50px;
+    z-index: 200;
+    padding: 10px 14px;
+    border-radius: 6px;
+    background: var(--primary-dark);
+    color: white;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 12px;
+}
+
 :root {
     --primary: #5686d8;
     --primary-dark: #3868b9;
