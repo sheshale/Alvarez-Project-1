@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Althea's portfolio: an aspiring web developer building accessible, easy-to-use websites. See her skills, projects, and contact details.">
-    <meta name="theme-color" content="#0d0f0e">
+    <meta name="theme-color" content="#0b0a0e">
     <title>Althea | Aspiring Web Developer and Designer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
+    <script>
+        (() => {
+            const savedTheme = localStorage.getItem('portfolio-theme');
+            const preferredTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            document.documentElement.dataset.theme = savedTheme || preferredTheme;
+        })();
+    </script>
 </head>
 <body>
 
@@ -33,7 +40,12 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
-            <a href="#contact" class="nav-button">Let's Talk</a>
+            <div class="nav-actions">
+                <button type="button" class="theme-toggle" aria-label="Switch to light mode" title="Switch theme">
+                    <span class="theme-icon" aria-hidden="true">☾</span>
+                </button>
+                <a href="#contact" class="nav-button">Let's Talk</a>
+            </div>
         </nav>
     </header>
 
@@ -281,6 +293,28 @@ I'm not just learning to write code. I'm learning to build things that make a di
         <p>© 2026 Althea. All rights reserved.</p>
         <a href="#home">Back to top ↑</a>
     </footer>
+
+    <script>
+        const themeToggle = document.querySelector('.theme-toggle');
+        const themeIcon = themeToggle.querySelector('.theme-icon');
+
+        function updateThemeButton() {
+            const isLight = document.documentElement.dataset.theme === 'light';
+            themeIcon.textContent = isLight ? '☀' : '☾';
+            themeToggle.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+            themeToggle.setAttribute('aria-pressed', isLight ? 'true' : 'false');
+            document.querySelector('meta[name="theme-color"]').content = isLight ? '#f7f5fa' : '#0b0a0e';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const nextTheme = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+            document.documentElement.dataset.theme = nextTheme;
+            localStorage.setItem('portfolio-theme', nextTheme);
+            updateThemeButton();
+        });
+
+        updateThemeButton();
+    </script>
 
 </body>
 </html>
