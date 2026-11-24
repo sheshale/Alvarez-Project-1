@@ -1,21 +1,29 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Althea's personal portfolio featuring her web development skills, projects, and contact information.">
-    <title>Althea | Aspiring Web Developer</title>
+    <meta name="description" content="Althea's portfolio: an aspiring web developer building accessible, easy-to-use websites. See her skills, projects, and contact details.">
+    <meta name="theme-color" content="#0d0f0e">
+    <title>Althea | Aspiring Web Developer and Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 
     <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="scroll-progress" aria-hidden="true"></div>
 
-    <!-- Navigation Bar -->
+    <!-- Mobile menu toggle (CSS-only) -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu">
+
     <header>
         <nav class="navbar" aria-label="Primary navigation">
-            <a href="#home" class="logo" aria-label="Althea portfolio home">Althea<span>.</span></a>
+            <a href="#home" class="logo" aria-label="Althea portfolio home">CLY<span>DE.</span></a>
+
+            <label for="menu-toggle" class="menu-btn" aria-hidden="true"><i></i><i></i><i></i></label>
 
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -31,82 +39,96 @@
 
     <main id="main-content">
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+            <p class="welcome"><span class="pulse-dot"></span>Open to learning and collaboration</p>
 
-            <h1>Hello, I'm <span>Althea</span></h1>
+            <h1>Hi, I'm <span>Althea.</span></h1>
 
-            <h2>Aspiring Web Developer</h2>
+            <h2><span class="typing">Aspiring Web Developer</span></h2>
 
             <p class="description">
-                I am a student developer who enjoys turning ideas into
-                accessible, thoughtful, and easy-to-use digital experiences.
+                I'm a student developer who turns ideas into clear, accessible,
+                and friendly websites that are a pleasure to use.
             </p>
 
             <div class="hero-buttons">
-                <a href="#projects" class="primary-button">View My Work</a>
-                <a href="#about" class="secondary-button">About Me</a>
+                <a href="#projects" class="primary-button">View my work</a>
+                <a href="#about" class="secondary-button">About me</a>
             </div>
         </div>
 
         <div class="hero-image">
+            <div class="orbit" aria-hidden="true"></div>
             <div class="image-container">
                 <img src="assets/image.png" alt="Althea, aspiring web developer">
             </div>
-          
+            <span class="chip chip-1" aria-hidden="true">&lt;HTML&gt;</span>
+            <span class="chip chip-2" aria-hidden="true">{ CSS }</span>
+            <span class="chip chip-3" aria-hidden="true">BSIT</span>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- Marquee -->
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+            <span>HTML</span><span>CSS</span><span>Programming</span><span>Problem Solving</span>
+            <span>HTML</span><span>CSS</span><span>Programming</span><span>Problem Solving</span>
+            <span>HTML</span><span>CSS</span><span>Programming</span><span>Problem Solving</span>
+            <span>HTML</span><span>CSS</span><span>Programming</span><span>Problem Solving</span>
+        </div>
+    </div>
+
+    <!-- About -->
     <section class="section about" id="about">
-        <div class="section-heading">
-            <p class="subtitle">GET TO KNOW ME</p>
-            <h2>About <span>Me</span></h2>
+        <div class="section-heading reveal">
+            <p class="subtitle">Get to know me</p>
+            <h2>About <span>me</span></h2>
         </div>
 
         <div class="about-content">
-            <div class="about-text">
-                <h3>Building ideas into digital experiences.</h3>
+            <div class="about-text reveal">
+                <h3>Building the Web, One Idea at a Time.</h3>
 
                 <p>
-                    Hello! I am Althea, an aspiring web developer who is
-                    interested in technology, programming, and creative design.
-                    I enjoy learning new tools and building projects that make
-                    everyday tasks simpler and more enjoyable.
+                    Hi, I'm Althea, an aspiring web developer with a passion for exploring how technology and creativity come together to solve real-world problems.
+                     I enjoy transforming ideas into functional, visually engaging websites, experimenting with new technologies,
+                      and discovering better ways to bring concepts to life through code.
                 </p>
 
                 <p>
-                    My goal is to continue developing my programming abilities,
-                    grow as a problem solver, and contribute to meaningful digital products.
+                    For me, every project is an opportunity to learn something new, challenge my creativity, and become a better problem solver.
+                     I'm continuously developing my programming skills, strengthening my understanding of web technologies, and working toward creating digital solutions that are not only useful and intuitive but also leave a meaningful impact.
+
+I'm not just learning to write code. I'm learning to build things that make a difference, one project at a time.
                 </p>
 
-                <a href="#contact" class="primary-button">Get In Touch</a>
+                <a href="#contact" class="primary-button">Get in touch</a>
             </div>
 
             <div class="about-details personal-details">
-                <div class="detail-card">
+                <div class="detail-card reveal">
                     <h3>Age</h3>
                     <p>20 years old</p>
                 </div>
 
-                <div class="detail-card">
+                <div class="detail-card reveal">
                     <h3>Education</h3>
-                    <p>BSIT, 2nd Year - 2-A</p>
+                    <p>BSIT, 2nd Year</p>
                 </div>
 
-                <div class="detail-card">
+                <div class="detail-card reveal">
                     <h3>School</h3>
-                    <p>Kabankalan Catholic College</p>
+                    <p>Kabankalan Catholic College, Inc.</p>
                 </div>
 
-                <div class="detail-card">
+                <div class="detail-card reveal">
                     <h3>Interests</h3>
                     <p>Watching movies and travelling</p>
                 </div>
 
-                <div class="detail-card detail-card-wide">
+                <div class="detail-card detail-card-wide reveal">
                     <h3>Address</h3>
                     <p>Prk. Calabasahan, Brgy. Tapi, Kabankalan City, Negros Occidental, 6111</p>
                 </div>
@@ -114,58 +136,83 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Skills -->
     <section class="section skills" id="skills">
-        <div class="section-heading">
-            <p class="subtitle">WHAT I CAN DO</p>
-            <h2>My <span>Skills</span></h2>
-            <p>Foundations I am learning and applying through personal projects.</p>
+        <div class="section-heading reveal">
+            <p class="subtitle">What I can do</p>
+            <h2>My <span>skills</span></h2>
+            <p>The foundations I'm building and putting into practice through personal projects. Hover or tap a card to see more.</p>
         </div>
 
         <div class="skills-container">
-            <div class="skill-card">
-                <div class="skill-icon">🌐</div>
-                <h3>HTML</h3>
-                <p>Building semantic, structured page layouts.</p>
+            <div class="skill-card reveal" tabindex="0">
+                <div class="skill-inner">
+                    <div class="skill-front">
+                        <div class="skill-icon">🌐</div>
+                        <h3>HTML</h3>
+                    </div>
+                    <div class="skill-back">
+                        <p>Writing semantic, well-structured page layouts.</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="skill-card">
-                <div class="skill-icon">🎨</div>
-                <h3>CSS</h3>
-                <p>Creating responsive and accessible interfaces.</p>
+            <div class="skill-card reveal" tabindex="0">
+                <div class="skill-inner">
+                    <div class="skill-front">
+                        <div class="skill-icon">🎨</div>
+                        <h3>CSS</h3>
+                    </div>
+                    <div class="skill-back">
+                        <p>Designing responsive, accessible interfaces.</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="skill-card">
-                <div class="skill-icon">💻</div>
-                <h3>Programming</h3>
-                <p>Developing clear logic and practical solutions.</p>
+            <div class="skill-card reveal" tabindex="0">
+                <div class="skill-inner">
+                    <div class="skill-front">
+                        <div class="skill-icon">💻</div>
+                        <h3>Programming</h3>
+                    </div>
+                    <div class="skill-back">
+                        <p>Writing clear logic and practical solutions.</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="skill-card">
-                <div class="skill-icon">🛠️</div>
-                <h3>Problem Solving</h3>
-                <p>Breaking down challenges and testing solutions.</p>
+            <div class="skill-card reveal" tabindex="0">
+                <div class="skill-inner">
+                    <div class="skill-front">
+                        <div class="skill-icon">🛠️</div>
+                        <h3>Problem Solving</h3>
+                    </div>
+                    <div class="skill-back">
+                        <p>Breaking challenges into steps and testing each fix.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects -->
     <section class="section projects" id="projects">
-        <div class="section-heading">
-            <p class="subtitle">MY RECENT WORK</p>
-            <h2>Featured <span>Projects</span></h2>
-            <p>Selected projects from my web development learning journey.</p>
+        <div class="section-heading reveal">
+            <p class="subtitle">My recent work</p>
+            <h2>Featured <span>projects</span></h2>
+            <p>A few projects from my web development learning journey.</p>
         </div>
 
         <div class="projects-container">
 
-            <article class="project-card">
+            <article class="project-card reveal" tabindex="0">
                 <div class="project-image blue" aria-label="Personal Portfolio project preview">
-                    <span>01</span>
+                    <span>&lt;/&gt;</span>
+                    <p class="project-peek">Layout, color, and accessibility in one page.</p>
                 </div>
                 <div class="project-info">
                     <h3>Personal Portfolio</h3>
-                    <p>A personal website showcasing my profile and skills.</p>
+                    <p>A personal website that introduces me and showcases my skills.</p>
                     <div class="tags">
                         <span>HTML</span>
                         <span>CSS</span>
@@ -173,13 +220,14 @@
                 </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card reveal" tabindex="0">
                 <div class="project-image purple" aria-label="Login Page Design project preview">
-                    <span>02</span>
+                    <span>[ ••• ]</span>
+                    <p class="project-peek">Clean forms with clear, friendly structure.</p>
                 </div>
                 <div class="project-info">
                     <h3>Login Page Design</h3>
-                    <p>A simple and modern user authentication interface.</p>
+                    <p>A simple, modern sign-in interface that's easy to use.</p>
                     <div class="tags">
                         <span>HTML</span>
                         <span>CSS</span>
@@ -187,13 +235,14 @@
                 </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card reveal" tabindex="0">
                 <div class="project-image peach" aria-label="Landing Page project preview">
-                    <span>03</span>
+                    <span>▤</span>
+                    <p class="project-peek">A responsive layout that adapts to any screen.</p>
                 </div>
                 <div class="project-info">
                     <h3>Landing Page</h3>
-                    <p>A clean landing page with a responsive layout.</p>
+                    <p>A clean, responsive landing page with a focused layout.</p>
                     <div class="tags">
                         <span>HTML</span>
                         <span>CSS</span>
@@ -204,34 +253,33 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact -->
     <section class="section contact" id="contact">
-        <div class="contact-box">
-            <p class="subtitle">HAVE A PROJECT IN MIND?</p>
-            <h2>Let's Work <span>Together!</span></h2>
+        <div class="contact-box reveal">
+            <p class="subtitle">Have a project in mind?</p>
+            <h2>Let's work <span>together!</span></h2>
             <p>
-                I am open to collaborations, learning opportunities,
+                I'm open to collaborations, learning opportunities,
                 and conversations about web development.
             </p>
 
             <div class="contact-details">
-                <a href="mailto:alvarezaltheaclyde451@gmail.com">alvarezaltheaclyde451@gmail.com</a>
-                <a href="tel:+639945573641">994 557-3641</a>
+                <a href="mailto:alvarezaltheaclyde451@gmail.com">✉ alvarezaltheaclyde451@gmail.com</a>
+                <a href="tel:+639945573641">☎ 994 557-3641</a>
                 <a href="https://www.facebook.com/share/1e2xqUFbUP/" target="_blank" rel="noopener noreferrer">Facebook Profile</a>
             </div>
 
             <a href="https://github.com/sheshale/Alvarez-Project-1" class="primary-button" target="_blank" rel="noopener noreferrer">
-                View My GitHub →
+                View my GitHub →
             </a>
         </div>
     </section>
 
     </main>
 
-    <!-- Footer -->
     <footer>
-        <p>© 2026 Althea. All Rights Reserved.</p>
-        <a href="#home">Back to Top ↑</a>
+        <p>© 2026 Althea. All rights reserved.</p>
+        <a href="#home">Back to top ↑</a>
     </footer>
 
 </body>
